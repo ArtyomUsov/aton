@@ -1,8 +1,30 @@
-# React + Vite
+# Монолитное Fullstack приложение: клиент + сервер + подключение к облачной MongoDB Atlas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## React + Vite
+## Библиотеки: mongoose, express, nodemon, bcrypt, dotenv, jsonwebtoken, @mui/material, react-router-dom
 
-Currently, two official plugins are available:
+# Инструкция:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## - Клонировать репозиторий: git clone https://github.com/ArtyomUsov/aton.git
+## - установить зависимости: npm install
+## - в первом терминале ввести команду: npm run server
+## - во втором терминале ввести команду: npm run dev
+## - пройти по ссылке в терминале
+
+
+# Реализовано:
+## Страница авторизации:
+### - Форма для авторизации по паре логин/пароль
+### - Автоматическая авторизация при наличии jwt токена 
+### - Форма для регистрации
+### - Защита от незаполненых полей
+### - Хэширование паролей
+
+
+## Главная страница:
+### - Данные авторизованного пользователя
+### - Таблица прикреплённых по id клиентов с выводом данных 
+### - Возможность моменять статус клиента и обновление данных в реальном времени
+### - Возможность выйти, сменить пользователя. Происходит сброс jwt токена
+
+# [Aton](https://artyomusov.github.io/aton/)
