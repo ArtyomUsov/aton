@@ -17,7 +17,7 @@ export default function Profile() {
       });
       if (response.status === 401) {
         localStorage.removeItem("token");
-        navigate("/auth");
+        navigate("/aton");
         return;
       }
       if (!response.ok) {
@@ -41,7 +41,7 @@ export default function Profile() {
 
   const logOut = () => {
     localStorage.removeItem("token");
-    navigate("/auth");
+    navigate("/aton");
   };
 
   useEffect(() => {

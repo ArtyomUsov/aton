@@ -18,7 +18,7 @@ function App() {
     <>
       <Routes>
         <Route path="/">
-          <Route path="auth" element={<Auth />} />
+          <Route path="aton" element={<Auth />} />
           <Route path="main" element={<Main />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
