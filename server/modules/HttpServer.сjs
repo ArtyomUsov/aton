@@ -1,0 +1,28 @@
+const express = require("express");
+const router = require("../routes/index.cjs");
+
+const app = express();
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5173');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  if (req.method === 'OPTIONS') {
+    res.sendStatus(200);
+  } else {
+    next();
+  }
+});
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use("/api", router);
+
+const host = process.env.HOST || "127.0.0.1";
+const port = process.env.PORT || 8080;
+
+const run = () => {
+  app.listen(port, host, () => {
+    console.log(`Server listens http://${host}:${port}`);
+  });
+};
+
+module.exports = { app, run };

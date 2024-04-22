@@ -1,0 +1,11 @@
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+const path = require("path");
+dotenv.config({ path: path.resolve(__dirname, "../.env") });
+
+const app = async () => {
+  await mongoose.connect(process.env.MONGODB_URI);
+  console.log("Подключение к базе данных выполнено");
+};
+
+module.exports = app;
